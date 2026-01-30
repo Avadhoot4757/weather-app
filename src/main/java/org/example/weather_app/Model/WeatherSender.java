@@ -1,16 +1,16 @@
 package org.example.weather_app.Model;
 
 public class WeatherSender {
-    private long id;
-    private String lat;
-    private String lon;
+    private Long id;
+    private double lat;
+    private double lon;
     private double min_temp_alert;
     private double max_temp_alert;
     private double last_known_temp;
     private boolean alert;
     private String last_updated;
 
-    public WeatherSender(long id, String lat, String lon, double min_temp_alert, double max_temp_alert, double last_known_temp, boolean alert, String last_updated) {
+    public WeatherSender(Long id, double lat, double lon, double min_temp_alert, double max_temp_alert, double last_known_temp, boolean alert, String last_updated) {
         this.id = id;
         this.lat = lat;
         this.lon = lon;
@@ -29,19 +29,19 @@ public class WeatherSender {
         this.id = id;
     }
 
-    public String getLat() {
+    public double getLat() {
         return lat;
     }
 
-    public void setLat(String lat) {
+    public void setLat(double lat) {
         this.lat = lat;
     }
 
-    public String getLon() {
+    public double getLon() {
         return lon;
     }
 
-    public void setLon(String lon) {
+    public void setLon(double lon) {
         this.lon = lon;
     }
 
