@@ -30,11 +30,14 @@ public class WeatherEntity {
     private boolean alert;
 
     @Column(name = "last_updated", nullable = false)
-    private LocalDateTime last_updated;
+    private String last_updated;
+
+    @Column(name = "favorite" , nullable = true )
+    private boolean favorite;
 
     public WeatherEntity() {}
 
-    public WeatherEntity(Long id, double lat, double lon, double min_temp_alert, double max_temp_alert, double last_known_temp, boolean alert, LocalDateTime last_updated) {
+    public WeatherEntity(Long id, double lat, double lon, double min_temp_alert, double max_temp_alert, double last_known_temp, boolean alert, String last_updated ) {
         this.id = id;
         this.lat = lat;
         this.lon = lon;
@@ -43,6 +46,7 @@ public class WeatherEntity {
         this.last_known_temp = last_known_temp;
         this.alert = alert;
         this.last_updated = last_updated;
+        this.favorite = false;
     }
 
     public Long getId() {
@@ -101,11 +105,19 @@ public class WeatherEntity {
         this.alert = alert;
     }
 
-    public LocalDateTime getLast_updated() {
+    public String getLast_updated() {
         return last_updated;
     }
 
-    public void setLast_updated(LocalDateTime last_updated) {
+    public boolean isFavorite() {
+        return favorite;
+    }
+
+    public void setFavorite(boolean favorite) {
+        this.favorite = favorite;
+    }
+
+    public void setLast_updated(String last_updated) {
         this.last_updated = last_updated;
     }
 }
