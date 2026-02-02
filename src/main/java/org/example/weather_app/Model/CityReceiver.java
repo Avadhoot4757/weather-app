@@ -7,7 +7,6 @@ public class CityReceiver {
     private List<City> results;
     private double generationtimeMs;
 
-    // Getters and setters
     public List<City> getResults() {
         return results;
     }
@@ -24,7 +23,6 @@ public class CityReceiver {
         this.generationtimeMs = generationtimeMs;
     }
 
-    // Inner City class to represent each city in the results
     public static class City {
         private long id;
         private String name;

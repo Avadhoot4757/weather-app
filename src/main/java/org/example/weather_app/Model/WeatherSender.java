@@ -2,6 +2,7 @@ package org.example.weather_app.Model;
 
 public class WeatherSender {
     private Long id;
+    private String cityName;
     private double lat;
     private double lon;
     private double min_temp_alert;
@@ -10,8 +11,9 @@ public class WeatherSender {
     private boolean alert;
     private String last_updated;
 
-    public WeatherSender(Long id, double lat, double lon, double min_temp_alert, double max_temp_alert, double last_known_temp, boolean alert, String last_updated) {
+    public WeatherSender(Long id, String cityName, double lat, double lon, double min_temp_alert, double max_temp_alert, double last_known_temp, boolean alert, String last_updated) {
         this.id = id;
+        this.cityName = cityName;
         this.lat = lat;
         this.lon = lon;
         this.min_temp_alert = min_temp_alert;
@@ -27,6 +29,14 @@ public class WeatherSender {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public String getCityName() {
+        return this.cityName;
+    }
+
+    public void setCityName(long id) {
+        this.cityName = cityName;
     }
 
     public double getLat() {

@@ -82,7 +82,6 @@ public class WeatherReceiver {
         private String interval;
         private String temperature_2m;
 
-        // Getters and setters
         public String getTime() {
             return time;
         }
@@ -122,7 +121,6 @@ public class WeatherReceiver {
         private int interval;
         private double temperature_2m;
 
-        // Getters and setters
         public String getTime() {
             return time;
         }
